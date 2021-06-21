@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    flex: 1;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    
+    width: 53px;
+}
+
+.dot {
+    width: 14px;
+    height: 14px;
+
+    background-color: #7A57FD;
+
+    border-radius: 14px;
+}

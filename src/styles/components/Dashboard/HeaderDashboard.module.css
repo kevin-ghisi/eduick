@@ -1,0 +1,61 @@
+.header {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 64px;
+    padding: 15px 156px;
+    background: #7A57FD url("/images/dots.svg") no-repeat 66px 50%;
+}
+
+.nav_item {
+    display: flex;
+    align-items: center;
+}
+
+.link {
+    font-size: 14px;
+    line-height: 19px;
+
+    margin-left: 48px;
+}
+
+.button {
+    height: 34px;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 15px;
+    text-transform: uppercase;
+
+    padding: 9px 17px;
+
+    color: #FFFFFF;
+    background: #200E6430;
+    border-radius: 4px;
+    box-shadow: none;
+}
+
+.avatar {
+    position: relative;
+    margin: auto 0 auto 28px;
+    width: 34px;
+    height: 34px;
+}
+
+.avatar img {
+    width: 34px;
+    border-radius: 18px;
+}
+
+.status {
+    position: absolute;
+    top: -4px;
+    right: 0;
+    
+    width: 10px;
+    height: 10px;
+
+    background: #FFD74F;
+    border-radius: 6px;
+}

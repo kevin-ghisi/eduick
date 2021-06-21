@@ -1,0 +1,54 @@
+.container {
+    position: relative;
+    padding: 42px 117px 19px;
+    margin: auto auto 30px;
+    max-width: 1140px;
+    background-color: #FFFFFF;
+}
+
+.detail {
+    position: absolute;
+    left: -40px;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    margin: 0 8px;
+}
+
+.intro {
+    width: 521px;
+    flex: inherit;
+}
+
+.title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 160%;
+    margin: 0;
+
+    color: #200E64;
+}
+
+.title b {
+    font-weight: 700;
+}
+
+.title em {
+    color: #FFB800;
+}
+
+.description {
+    font-size: 14px;
+    line-height: 160%;
+
+    color: #343434;
+}

@@ -1,0 +1,119 @@
+.overlay {
+    background: #200E6480;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    background: #6A40E4;
+    width: 100%;
+    max-width: 525px;
+    padding: 2.5rem;
+    border-radius: 4px;
+    text-align: left;
+    position: relative;
+  }
+  
+  .container header {
+    font-family: "Poppins", sans-serif;
+	line-height: 2.5rem;
+    font-size: 2.125rem;
+    font-weight: 400;
+    color: #FFF;
+
+	margin-bottom: 48px;
+  }
+
+  .container header em {
+	font-size: 2.375rem;
+	font-weight: 700;
+	font-style: normal;
+	text-transform: uppercase;
+	color: #FFEAA4;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+
+    font-size: 1rem;
+    color: #FFF;
+  }
+
+  .form input {
+    background: rgba(255, 255, 255, 0.24);
+    opacity: 0.4;
+    height: 56px;
+    border: 1px solid #FFFFFF;
+    border-radius: 4px;
+
+    margin-bottom: 16px;
+  }
+
+  .form input:nth-last-child() {
+    margin-bottom: 21px;
+  }
+
+  .form label {
+    line-height: 30.67px;
+    margin-bottom: 5px;
+  }
+
+  .passwordContainer {
+	  display: flex;
+	  flex-direction: column;
+    position: relative;
+
+    margin-bottom: 24px;
+  }
+
+  .passwordInput {
+    margin-bottom: 0 !important;
+  }
+
+  .passwordContainer img {
+		position: absolute;
+		bottom: 16px;
+		right: 21px;
+
+    width: 24px;
+	  
+  }
+
+  .submitButton {
+    text-align: right;
+    max-width: 132px;
+    text-transform: uppercase;
+    box-shadow: none;
+    line-height: 26.84px;
+
+    margin: 0 0 0 auto;
+  }
+
+  .form img:hover {
+	color: #00fcb6;
+	cursor: pointer;
+  }
+
+  .closeModal {
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+
+    width: 51px;
+    height: 51px;
+    padding: 0;
+    background: #200E64;
+    border-radius: 100%;
+    box-shadow: none;
+    font-size: 0;
+
+    transform: translate(50%, -50%);
+  }

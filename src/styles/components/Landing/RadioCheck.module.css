@@ -1,0 +1,69 @@
+.radio {
+    display: grid;
+    grid-template-columns: min-content auto;
+
+    padding: 14px;
+    margin-left: 20px;
+
+    background: rgba(121, 85, 232, 0.3);
+    border: 1px solid transparent;
+    border-radius: 4px;
+
+    cursor: pointer;
+}
+
+.radioInput input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.radioControl {
+    display: grid;
+    place-items: center;
+    width: 1.125rem;
+    height: 1.125rem;
+    border-radius: 50%;
+
+    background: #FFFFFF20;
+
+    transform: translateY(0.05em);
+}
+
+.radioInput {
+    display: flex;
+    align-items: center;
+}
+.radioLabel {
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 26.84px;
+    text-transform: uppercase;
+
+    margin-left: 13px;
+}
+
+input + .radioControl::before {
+    display: block;
+    margin: auto;
+    content: "";
+    width: 1.125rem;
+    height: 1.125rem;
+
+    background: #FFD74F url("/images/circle_checked.svg") no-repeat center;
+
+    border-radius: 50%;
+    transition: 180ms transform ease-in-out;
+    transform: scale(0);
+}
+
+input:checked + .radioControl::before {
+    transform: scale(1);
+}
+
+.active {
+    border: 1px solid #A68EEF;
+}
+
+.unchecked {
+    border: 1px solid transparent;
+}
