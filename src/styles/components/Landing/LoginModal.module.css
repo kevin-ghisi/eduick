@@ -117,3 +117,26 @@
 
     transform: translate(50%, -50%);
   }
+
+  @media (max-width: 900px) {
+    .overlay {
+      z-index: 3;
+    }
+
+    .container {
+        height: 100%;
+
+        padding: 1.5rem;
+    }
+
+    .container header {
+      font-size: 1.75rem;
+      line-height: 33.16px;
+    }
+
+    .container header em {
+      font-size: 2rem;
+    }
+
+
+}

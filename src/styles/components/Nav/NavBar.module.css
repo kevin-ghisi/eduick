@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+
+    position: relative;
+    padding: 29px;
+
+    z-index: 3;
+}
+
+.links {
+    width: 100%;
+    margin-top: 202px;
+    text-align: center;
+}
+
+.fixed {
+    position: fixed;
+}

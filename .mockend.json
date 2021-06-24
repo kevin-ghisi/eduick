@@ -1,0 +1,10 @@
+{
+    "Post": {
+        "id": "int",
+        "title": "string",
+        "lessons": "int",
+        "rating": "int",
+        "thumbnail": "string",
+        "createdAt": "date"
+    }
+}

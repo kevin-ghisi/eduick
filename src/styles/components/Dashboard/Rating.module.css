@@ -1,3 +1,15 @@
+.star {
+    width: 23px;
+    height: 23px;
+}
+
 .filled {
     fill: #FFC908;
  }
+
+ @media (max-width: 900px) {
+    .star {
+        width: 17.38px;
+        height: 17.38px;
+    }
+}

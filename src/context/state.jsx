@@ -6,6 +6,7 @@ const AppContext = createContext();
 
 export function AppWrapper({ children }) {
     const [isLevelUpModalOpen, setIsLevelUpModalOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState(false);
 
     function openLogin() {
         setIsLevelUpModalOpen(true)
@@ -15,10 +16,14 @@ export function AppWrapper({ children }) {
         setIsLevelUpModalOpen(false)
     }
 
+    const toggle = () => setIsOpen(!isOpen)
+
     return (
         <AppContext.Provider value={{
             openLogin,
-            closeLogin
+            closeLogin,
+            isOpen,
+            toggle
         }}>
             {children}
             {isLevelUpModalOpen && <LoginModal />}

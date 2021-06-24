@@ -1,13 +1,18 @@
+import { GetStaticProps } from 'next'
+
 import Head from 'next/head'
+import Image from 'next/image';
 import Header from '../components/Dashboard/HeaderDashboard'
 import Banner from '../components/Dashboard/Banner'
 import Card from '../components/Dashboard/Card'
 import Loader from '../components/Dashboard/Loader'
 import Footer from '../components/Dashboard/Footer'
 
+import { api } from '../services/api'
+
 import styles from '../styles/components/Dashboard/Dashboard.module.css'
 
-export default function Dashboard() {
+export default function Dashboard({ posts }) {
     return (
         <div>
             <Head>
@@ -26,25 +31,54 @@ export default function Dashboard() {
                 <div className={styles.container}>
                     <Banner />
 
-                    <div className={styles.content}>
-                        <div className={styles.row}>
-                            <Card />
-                            <Card />
-                            <Card />
-                        </div>
-                        <div className={styles.row}>
-                            <Card />
-                            <Card />
-                            <Card />
-                        </div>
+                    <div className={styles.wrapper}>
+                        <div className={styles.content}>
+                            {posts.map((post) => {
+                                return (
+                                    <Card
+                                        key={post.id}
+                                        image={post.thumbnail}
+                                        rating={post.rating}
+                                        lessons={post.lessons}
+                                        title={post.title}
+                                    />
+                                )
+                            })}
 
+
+                        </div>
                         <Loader />
                     </div>
-
                 </div>
                 <Footer />
-            </div>
 
+            </div>
         </div>
     )
+}
+
+export const getStaticProps = async () => {
+    const { data } = await api.get('posts', {
+        params: {
+            _order: 'desc'
+        }
+    })
+
+    const posts = data.map(post => {
+        return {
+            id: post.id,
+            title: post.title,
+            lessons: post.lessons,
+            rating: post.rating,
+            thumbnail: post.thumbnail,
+
+        };
+    })
+
+    return {
+        props: {
+            posts
+        },
+        revalidate: 60 * 60 * 12,
+    }
 }

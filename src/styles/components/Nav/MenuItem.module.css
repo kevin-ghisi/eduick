@@ -1,0 +1,15 @@
+.link {
+    display: block;
+
+    font-size: 1.312rem;
+    line-height: 29px;
+
+    max-width: 272px;
+
+    margin-bottom: 0.937rem;
+}
+
+.link button {
+    width: 100%;
+    margin-top: 44px;
+}
