@@ -5,12 +5,16 @@ import { useState } from 'react';
 
 export function LoginModal() {
 
+    // Get window size
     const [width] = useWindowSize();
 
+    // Get closeLogin function from app context
     const { closeLogin } = useAppContext();
 
+    // create password field states
     const [isPasswordVisible, setIsPasswordVisible] = useState(false);
 
+    // toggle password visibility function
     const togglePasswordVisiblity = () => {
         setIsPasswordVisible(!isPasswordVisible);
     };
@@ -28,6 +32,7 @@ export function LoginModal() {
                     <div className={styles.passwordContainer}>
                         <label htmlFor="password">Password:</label>
                         <input type={isPasswordVisible ? 'text' : 'password'} name="password" className={styles.passwordInput} />
+                        {/* Change icon if password is visible */}
                         {!isPasswordVisible ?
                             <img src="icons/eye.svg" alt="" onClick={togglePasswordVisiblity} />
                             :
@@ -41,6 +46,7 @@ export function LoginModal() {
 
 
                 </form>
+                {/* Show content based on window width */}
                 {width > 900 ?
                     <button type="button" onClick={closeLogin} className={styles.closeModal}>
                         <img src="icons/close.svg" alt="Fechar modal" width={14} height={14} />

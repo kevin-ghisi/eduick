@@ -22,10 +22,19 @@
     margin-bottom: 30px;
 }
 
-
-
+/* responsiveness css */
 @media (max-width: 900px) {
     .container {
         padding: 31px 24px 27px;
+    }
+
+    .content>* {
+        flex-basis: 270px;
+    }
+}
+
+@media (max-width: 860px) {
+    .content {
+        justify-content: space-evenly;
     }
 }

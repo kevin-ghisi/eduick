@@ -1,5 +1,5 @@
 import Image from 'next/dist/client/image';
-import React, { useState } from 'react';
+import React from 'react';
 import styles from '../../styles/components/Landing/Landing.module.css';
 import { useWindowSize } from '../../utils/getWindowDimensions';
 import { RadioButton } from './RadioButton';
@@ -8,11 +8,13 @@ import { RadioButton } from './RadioButton';
 
 export function Landing() {
 
-    const [width, height] = useWindowSize();
+    // Get window size
+    const [width] = useWindowSize();
 
     return (
         <>
             <div className={styles.container}>
+                {/* Show content based on window width */}
                 {width > 900 ? (
                     <div className={styles.container__column}>
 
@@ -30,6 +32,7 @@ export function Landing() {
                 )}
                 <div className={styles.container__column}>
                     <div className={styles.container__content} style={{ maxWidth: '600px' }}>
+                        {/* Show content based on window width */}
                         {width > 900 ? (
                             <img src="images/detalhe.svg" alt="" className={styles.imgDetail} />
                         ) : (
@@ -39,6 +42,7 @@ export function Landing() {
 
                         <div>
                             <h4 className={styles.title}>Find your <br /><em className={styles.detail}>best teacher</em></h4>
+                            {/* Show content based on window width */}
                             {width > 900 ? (
                                 <p className={styles.description}>Whether you are a student trying to fnd your ideal private language teachers/tutors or a teacher trying to find great students for your customised private lessons!</p>
                             ) : (
@@ -52,7 +56,7 @@ export function Landing() {
 
                                     <RadioButton label="I'M A TEACHER" />
                                     <RadioButton label="I'M A STUDENT" />
-
+                                    {/* Show content based on window width */}
                                     {width > 900 ? (
                                         <button type="submit" className={styles.submit}>search</button>
                                     ) : (
@@ -60,6 +64,7 @@ export function Landing() {
                                     )}
 
                                 </div>
+                                {/* Show content based on window width */}
                                 {width < 900 ? (
                                     <button type="submit" className={styles.submit}>search</button>
                                 ) : (
@@ -67,6 +72,7 @@ export function Landing() {
                                 )}
                             </form>
                         </div>
+                        {/* Show content based on window width */}
                         {width > 900 ? (
                             ''
                         ) : (

@@ -9,181 +9,181 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 
-  .container {
-    background: #6A40E4;
-    width: 100%;
-    max-width: 525px;
-    padding: 2.5rem;
-    border-radius: 4px;
-    text-align: left;
-    position: relative;
-  }
-  
-  .container header {
-    font-family: "Poppins", sans-serif;
+.container {
+	background: #6A40E4;
+	width: 100%;
+	max-width: 525px;
+	padding: 2.5rem;
+	border-radius: 4px;
+	text-align: left;
+	position: relative;
+}
+
+.container header {
+	font-family: "Poppins", sans-serif;
 	line-height: 2.5rem;
-    font-size: 2.125rem;
-    font-weight: 400;
-    color: #FFF;
+	font-size: 2.125rem;
+	font-weight: 400;
+	color: #FFF;
 
 	margin-bottom: 48px;
-  }
+}
 
-  .container header em {
+.container header em {
 	font-size: 2.375rem;
 	font-weight: 700;
 	font-style: normal;
 	text-transform: uppercase;
 	color: #FFEAA4;
-  }
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+
+	font-size: 1rem;
+	color: #FFF;
+}
+
+.form input {
+	color: #FFFFFF;
+	background: #FFFFFF24;
+	height: 56px;
+	border: 1px solid #FFFFFF24;
+	border-radius: 4px;
+
+	font-size: 0.875rem;
+	line-height: 120%;
+
+	padding: 0.875rem;
+	margin-bottom: 16px;
+}
+
+.form input:focus {
+	border: 1px solid #FFFFFF50;
+	outline: none;
+}
+
+.form input:nth-last-child() {
+  	margin-bottom: 21px;
+}
+
+.form label {
+	line-height: 30.67px;
+	margin-bottom: 5px;
+}
+
+.passwordContainer {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+
+	margin-bottom: 24px;
+}
+
+.passwordInput {
+  	margin-bottom: 0 !important;
+}
+
+.passwordContainer img {
+	position: absolute;
+	bottom: 16px;
+	right: 21px;
+
+	width: 24px;
+	height: 24px;
   
-  .form {
-    display: flex;
-    flex-direction: column;
+}
 
-    font-size: 1rem;
-    color: #FFF;
-  }
+.submitButton {
+	text-align: right;
+	max-width: 132px;
+	text-transform: uppercase;
+	box-shadow: none;
+	line-height: 26.84px;
 
-  .form input {
-    color: #FFFFFF;
-    background: #FFFFFF24;
-    height: 56px;
-    border: 1px solid #FFFFFF24;
-    border-radius: 4px;
+	margin: 0 0 0 auto;
+}
 
-    font-size: 0.875rem;
-    line-height: 120%;
-
-    padding: 0.875rem;
-    margin-bottom: 16px;
-  }
-
-  .form input:focus {
-    border: 1px solid #FFFFFF50;
-    outline: none;
-  }
-
-  .form input:nth-last-child() {
-    margin-bottom: 21px;
-  }
-
-  .form label {
-    line-height: 30.67px;
-    margin-bottom: 5px;
-  }
-
-  .passwordContainer {
-	  display: flex;
-	  flex-direction: column;
-    position: relative;
-
-    margin-bottom: 24px;
-  }
-
-  .passwordInput {
-    margin-bottom: 0 !important;
-  }
-
-  .passwordContainer img {
-		position: absolute;
-		bottom: 16px;
-		right: 21px;
-
-    width: 24px;
-    height: 24px;
-	  
-  }
-
-  .submitButton {
-    text-align: right;
-    max-width: 132px;
-    text-transform: uppercase;
-    box-shadow: none;
-    line-height: 26.84px;
-
-    margin: 0 0 0 auto;
-  }
-
-  .form img:hover {
+.form img:hover {
 	color: #00fcb6;
 	cursor: pointer;
-  }
+}
 
-  .closeModal {
-    position: absolute;
-    right: 0.5rem;
-    top: 0.5rem;
+.closeModal {
+	position: absolute;
+	right: 0.5rem;
+	top: 0.5rem;
 
-    width: 51px;
-    height: 51px;
-    padding: 0;
-    background: #200E64;
-    border-radius: 100%;
-    box-shadow: none;
-    font-size: 0;
+	width: 51px;
+	height: 51px;
+	padding: 0;
+	background: #200E64;
+	border-radius: 100%;
+	box-shadow: none;
+	font-size: 0;
 
-    transform: translate(50%, -50%);
-  }
+	transform: translate(50%, -50%);
+}
 
-  @media (max-width: 900px) {
-    .overlay {
-      z-index: 3;
-    }
+@media (max-width: 900px) {
+	.overlay {
+		z-index: 3;
+	}
 
-    .container {
-        height: 100%;
+	.container {
+		height: 100%;
 
-        padding: 1.5rem;
-    }
+		padding: 1.5rem;
+	}
 
-    .container header {
-      font-size: 1.75rem;
-      line-height: 33.16px;
+	.container header {
+		font-size: 1.75rem;
+		line-height: 33.16px;
 
-      margin-bottom: 37px;
-    }
+		margin-bottom: 37px;
+	}
 
-    .container header em {
-      font-size: 2rem;
-    }
+	.container header em {
+		font-size: 2rem;
+	}
 
-    .form label {
-      font-size: 0.875rem;
-      line-height: 26.84px;
-      margin-bottom: 4px;
-    }
+	.form label {
+		font-size: 0.875rem;
+		line-height: 26.84px;
+		margin-bottom: 4px;
+	}
 
-    .form input {
-      height: 48px;
-    }
+	.form input {
+		height: 48px;
+	}
 
-    .passwordContainer img {
-      width: 19px;
-      height: 19px;
-    }
+	.passwordContainer img {
+		width: 19px;
+		height: 19px;
+	}
 
-    .submitButton {
-      text-align: center;
-      width: 100%;
-      max-width: none;
-    }
+	.submitButton {
+		text-align: center;
+		width: 100%;
+		max-width: none;
+	}
 
-    .closeModal {
-      position: absolute;
-      right: 1.5rem;
-      top: 1.5rem;
-  
-      width: 14px;
-      height: 14px;
-      padding: 0;
-      background: none;
-      border-radius: 0;
-      box-shadow: none;
-      font-size: 0;
-  
-      transform: none;
-    }
+	.closeModal {
+		position: absolute;
+		right: 1.5rem;
+		top: 1.5rem;
+
+		width: 14px;
+		height: 14px;
+		padding: 0;
+		background: none;
+		border-radius: 0;
+		box-shadow: none;
+		font-size: 0;
+
+		transform: none;
+	}
 }

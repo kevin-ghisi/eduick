@@ -45,13 +45,15 @@
     color: #200E64;
 }
 
-@media (max-width: 900px) {
+/* responsiveness css */
+@media (max-width: 1024px) {
     .container {
+        max-width: 270px;
         padding: 9px 9px 22px;
     }
 
     .container img {
-        max-height: 164px;
+        max-height: 123px;
         margin-bottom: 10px;
     }
 
@@ -62,11 +64,5 @@
     .title {
         font-size: 1rem;
         margin: 0 0 0 5px;
-    }
-}
-
-@media (max-width: 320px) {
-    .container img {
-        max-height: 123px;
     }
 }

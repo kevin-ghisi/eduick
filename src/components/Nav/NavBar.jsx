@@ -4,33 +4,60 @@ import { Close } from './Close';
 import { Hamburger } from './Hamburger';
 import { Logo } from './Logo';
 import { MenuItem } from './MenuItem';
+import { useWindowSize } from '../../utils/getWindowDimensions';
 
 
 
-export function NavBar() {
+export function NavBar(props) {
 
-    const { isOpen, toggle, openLogin } = useAppContext();
+    //Get window width
+    const [width] = useWindowSize();
+
+    //Get states and functions from app context
+    const { isOpen, mobileToggle, openLogin } = useAppContext();
 
     return (
         <>
-            <div className={`${styles.container} ${isOpen ? styles.fixed : ''}`}>
-                <Hamburger isOpen={isOpen} toggle={toggle} />
-                <Logo isOpen={isOpen} />
-                <Close isOpen={isOpen} toggle={toggle} />
+            {/* Show content based on window width */}
+            {width > 900 ?
+                <div className={styles.container}>
+                    <Logo />
 
-                {isOpen ?
+
                     <div className={styles.links}>
-                        <MenuItem to="#" toggle={toggle}>How it Works</MenuItem>
-                        <MenuItem to="#" toggle={toggle}>About Us</MenuItem>
-                        <MenuItem to="#" toggle={toggle}>
-                            <button type="button" onClick={openLogin}>Get Started</button>
-                        </MenuItem>
-                    </div>
-                    :
-                    ''
-                }
+                        <MenuItem to="#" >How it Works</MenuItem>
+                        <MenuItem to="#" >About Us</MenuItem>
 
-            </div >
+                    </div>
+                    <MenuItem to="#" >
+                        <button type="button" onClick={openLogin}>Get Started</button>
+                    </MenuItem>
+
+                </div >
+                :
+                <div className={styles.container}>
+                    <div className={`${styles.nav} ${isOpen ? styles.fixed : ''}`}>
+                        <Hamburger isOpen={isOpen} toggle={mobileToggle} />
+                        <Logo isOpen={isOpen} />
+                        <Close isOpen={isOpen} toggle={mobileToggle} />
+
+
+
+                    </div >
+                    {/* Show content based if the menu is open or not */}
+                    {isOpen ?
+                        <div className={styles.links}>
+                            <MenuItem to="#" toggle={mobileToggle}>How it Works</MenuItem>
+                            <MenuItem to="#" toggle={mobileToggle}>About Us</MenuItem>
+                            <MenuItem to="#" toggle={mobileToggle}>
+                                <button type="button" onClick={openLogin}>Get Started</button>
+                            </MenuItem>
+                        </div>
+                        :
+                        ''
+                    }
+                </div>
+            }
         </>
     )
 }

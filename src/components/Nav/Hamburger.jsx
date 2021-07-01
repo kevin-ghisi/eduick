@@ -2,6 +2,7 @@ import styles from '../../styles/components/Nav/Hamburger.module.css';
 
 export function Hamburger({ isOpen, toggle }) {
 
+    //Hamburger nav component
     return (
         <>
             {!isOpen ?

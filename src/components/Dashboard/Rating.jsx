@@ -3,10 +3,12 @@ import styles from '../../styles/components/Dashboard/Rating.module.css'
 
 export default function Rating(props) {
 
+    // Create the rating state based on the props received
     const [rating] = useState(props.rating);
 
     return (
         <div>
+            {/* Iterate 5 times the icon and fill the rating */}
             {[...Array(5)].map((star, index) => {
                 index += 1;
                 return (

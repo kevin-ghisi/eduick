@@ -1,15 +1,21 @@
 .link {
-    display: block;
-
-    font-size: 1.312rem;
-    line-height: 29px;
-
-    max-width: 272px;
-
-    margin-bottom: 0.937rem;
+    font-size: 0.875rem;
 }
 
-.link button {
-    width: 100%;
-    margin-top: 44px;
+/* responsiveness css */
+@media (max-width: 900px) {
+    .link {
+        display: block;
+    
+        font-size: 1.312rem;
+        line-height: 29px;
+    
+        margin-bottom: 0.937rem;
+    }
+    
+    .link button {
+        width: 100%;
+        margin-top: 44px;
+    }
+
 }

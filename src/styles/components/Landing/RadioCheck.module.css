@@ -66,9 +66,11 @@ input:checked + .radioControl::before {
     border: 1px solid transparent;
 }
 
+/* responsiveness css */
 @media (max-width: 900px) {
     .radio {
         margin-left: 12px;
+        width: 100%;
     }
 
     .radioLabel {
